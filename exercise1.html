@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lab3 -- Exercise 1</title> 
+</head>
+<body> 
+    <h1>JavaScript Lab Exercise 1</h1> 
+    <script> 
+        // Exercise-1A
+        console.log("Exercise-1A")
+        var varaiable1 = 1;
+        let varaiable2 = 2;
+        const varaiable3 = 3;
+        
+        varaiable2 = 4;
+        
+        try{
+            varaiable3 = 4;
+            console.log(varaiable3);   
+        }catch(error){
+            console.error("“Error: cannot reassign const", error.messge);
+        }
+        console.log("Try and catch finished.")
+        console.log(varaiable2);
+
+        // Exercise-1B 
+        console.log("Exercise-1B")
+        let String1 = "Hello World!";
+        let String2 = "JavaScript is fun!";
+        console.log(String1.length)
+        console.log(String2.length)
+        
+        let String3 = String2.replace("fun", "awesome");
+        console.log(String3)
+        
+        // Exercise-1C 
+        console.log("Exercise-1C");
+        let name = "Alice";
+        let age = 25;
+        
+        let intro = `My name is ${name} and I am ${age} years old`;
+        console.log(intro)
+        
+        // Exercise-1D
+        console.log("Exercise-1D");
+        const students = ["Alice", "Tom", "Charlie"] 
+        const ages = [19, 21, 20] 
+        
+        for (let i = 0; i < students.length; i++) { 
+            let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`; 
+            console.log(studentInfo); 
+        }
+        
+        // Exercise-1E
+        console.log("Exercise-1E");
+        const now = new Date();
+
+        console.log(now.toLocaleDateString("en-CA"));
+        // const weekdayName
+        const year = now.getFullYear();
+        console.log("Year:", year);
+        
+        const month = now.getMonth();
+        console.log("Month:", month);
+        
+        const DayofWeek = now.toLocaleDateString();
+        console.log(now.toLocaleDateString("en-US", {weekday:"long"}));
+        console.log("DayofWeek:", DayofWeek);
+        
+        let season;
+        if(month==11|| month==0|| month==1) {
+            season="Winter"} 
+        else if(month==2|| month==3|| month==4){
+                season="Spring"}
+        else if(month==5|| month==6|| month==7){
+                season="Summer"}
+        else {
+                season="Fall"};
+        console.log("Season:", season);
+        
+    </script> 
+</body> 
+</html> 
